@@ -1,0 +1,4 @@
+async function submit(){let e=document.querySelector("input").value.trim(),t=`https://nekohime.xyz/api/downloader/tiktok?url=${e}&apikey=c5aefb49`;try{let i=await fetch(t);if(!i.ok)throw Error("Could not fetch data");let o=await i.json(),l=document.querySelector(".video-preview");l.innerHTML=`
+  <img src="${o.result.dynamic_cover}" width="196" height="350">
+  </img>
+  `,l.firstElementChild.style="margin: 2rem auto; display: block;";let r=document.createElement("a");console.log(o),r.href=o.result.video[0],r.download="video.mp4",r.style="display: block; margin: 1rem auto; text-align:center; color: blue;",r.textContent="Download Video",l.appendChild(r)}catch(a){throw Error(a)}}document.querySelector("button").addEventListener("click",submit);

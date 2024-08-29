@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Downloader</title>
+    <!-- TailwindCSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional custom styles */
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="container bg-white rounded-lg shadow-lg p-6">
+      <header class="text-center mb-6">
+        <h1 class="text-3xl font-bold text-gray-800">Downloader</h1>
+        <p class="text-gray-600 mt-2">
+          Just paste the TikTok video or music link below and hit that button!
+        </p>
+      </header>
+      <main>
+        <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+          <section class="flex flex-col space-y-4">
+            <label for="url" class="block text-gray-700">
+              <input
+                type="text"
+                id="url"
+                placeholder="Paste the link here"
+                class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </label>
+            <button
+              type="submit"
+              class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Download
+            </button>
+          </section>
+          <section id="preview">
+            <div class="bg-gray-100 p-4 rounded-lg shadow-md w-full">
+              <!-- Video Preview  -->
+              <div class="video-preview">
+                <!-- Link video  -->
+                
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
