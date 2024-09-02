@@ -13,5 +13,8 @@
     "mp3"
   ],
   "author": "Usamah As Salafi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.3.1"
+  }
 }
